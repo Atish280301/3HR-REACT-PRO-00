@@ -3,7 +3,7 @@ import Card from '../UserInterface/Card';
 import Button from './Button';
 const ErrorModel = (props) =>{
     return(
-        <div>
+        <React.Fragment>
         <div className="black" onClick={props.onConfirm} />
         <Card>
             <header>
@@ -20,7 +20,7 @@ const ErrorModel = (props) =>{
                 <Button onClick={props.onConfirm}>OK!</Button>
             </footer>
         </Card>
-        </div>
+        </React.Fragment>
     );
 }
 export default ErrorModel;

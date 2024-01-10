@@ -10,12 +10,12 @@ function App() {
     });
   }
   return (
-    <div>
+    <>
       <Adduser 
         OnAddUser = {AddUserHandler}
       />
       <UserList users={userList}/>
-    </div>
+    </>
   );
 }
 

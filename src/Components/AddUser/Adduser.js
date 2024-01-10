@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import Card from '../UserInterface/Card';
 import Button from '../UserInterface/Button';
 import ErrorModel from '../UserInterface/ErrorModel';
-import Wrapper from '../Helpers/Wrapper';
+// import Wrapper from '../Helpers/Wrapper';
 const Adduser = (props) => {
     const [EnteredUserName, SetEnteredUserName] = useState('');
     const [EnteredUserAge, SetEnteredUserAge] = useState('');
@@ -38,7 +38,7 @@ const Adduser = (props) => {
         SetError(null);
     }
     return(
-        <Wrapper>
+        <Fragment>
             {Error && <ErrorModel 
                 title = {Error.title}
                 message={Error.message}
@@ -63,7 +63,7 @@ const Adduser = (props) => {
                 <Button type="submit">Submit</Button>
             </form>
             </Card>
-        </Wrapper>
+        </Fragment>
     );
 }
 export default Adduser;
